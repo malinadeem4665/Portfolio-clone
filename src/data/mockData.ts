@@ -141,7 +141,7 @@ export const projectsData = [
     title: "Saasify",
     desc: "Modern SaaS landing page with smooth animations and conversion-focused design sections",
     link: "https://github.com/malinadeem4665/Saasify",
-    demo: "https://saasify-tech.netlify.app/",
+    demo: "https://saasify-com.netlify.app/",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fdecf7e09d7274ecabb7f55cfaacf342e%2Fcf02819652094554be3d867d20f24df5?format=webp&width=800&height=1200",
     icons: [
       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/mbwmbhndMG/ztcjg3sb_expires_30_days.png",
@@ -165,7 +165,7 @@ export const projectsData = [
     title: "SaaS Admin Dashboard",
     desc: "Fully responsive admin dashboard with data visualization and intuitive navigation for SaaS apps",
     link: "https://github.com/malinadeem4665/Saas-admin-dashboard/",
-    demo: "https://saas-admin-dashboard-io.netlify.app/",
+    demo: "https://saas-admin-dashboard-tech.netlify.app/",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fdecf7e09d7274ecabb7f55cfaacf342e%2F9cd7c4f4a6134e649c32280ac5b11415?format=webp&width=800&height=1200",
     icons: [
       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/mbwmbhndMG/ztcjg3sb_expires_30_days.png",
