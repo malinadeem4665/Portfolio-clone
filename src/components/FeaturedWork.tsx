@@ -1,4 +1,5 @@
 import { projectsData } from '@/data/mockData';
+import { ParticleCard } from '@/components/MagicBento';
 
 const FeaturedWork = () => {
   return (
@@ -16,7 +17,7 @@ const FeaturedWork = () => {
       {/* Projects Grid */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project, index) => (
-          <div
+          <ParticleCard
             key={index}
             className={`group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 ${
               index <= 2 ? 'animate-fade-in' : ''
@@ -24,6 +25,8 @@ const FeaturedWork = () => {
             style={{
               animationDelay: `${index * 0.1}s`,
             }}
+            enableMagnetism
+            clickEffect
           >
             {/* Project Image Container */}
             <div className="relative overflow-hidden h-48 bg-secondary">
@@ -101,7 +104,7 @@ const FeaturedWork = () => {
 
             {/* Floating Accent */}
             <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500 blur-2xl" />
-          </div>
+          </ParticleCard>
         ))}
       </div>
 
