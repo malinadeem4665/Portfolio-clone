@@ -1,5 +1,7 @@
 import { heroData } from '@/data/mockData';
 import AnimatedRole from './AnimatedRole';
+import { ParticleCard } from './MagicBento';
+import ProfileCard from './ProfileCard';
 
 const Hero = () => {
   const { intro } = heroData;
@@ -23,27 +25,40 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-wrap gap-5">
-          <a href="https://github.com/malinadeem4665/" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-6 py-2.5 rounded-md border border-primary hover:bg-transparent hover:text-primary hover-scale transition-all duration-300 shadow-lg shadow-primary/20 font-medium">
-            View on Github
-          </a>
-          <a href="https://www.linkedin.com/in/ali-nadeem-74bb523b6/" target="_blank" rel="noopener noreferrer" className="bg-transparent text-primary px-6 py-2.5 rounded-md border border-primary hover:bg-primary hover:text-primary-foreground hover-scale transition-all duration-300 font-medium">
-            View on LinkedIn
-          </a>
+          <ParticleCard
+            className="bg-primary text-primary-foreground px-6 py-2.5 rounded-md border border-primary hover:bg-transparent hover:text-primary hover-scale transition-all duration-300 shadow-lg shadow-primary/20 font-medium"
+            enableMagnetism
+          >
+            <a href="https://github.com/malinadeem4665/" target="_blank" rel="noopener noreferrer" className="w-full block">
+              View on Github
+            </a>
+          </ParticleCard>
+          <ParticleCard
+            className="bg-transparent text-primary px-6 py-2.5 rounded-md border border-primary hover:bg-primary hover:text-primary-foreground hover-scale transition-all duration-300 font-medium"
+            enableMagnetism
+          >
+            <a href="https://www.linkedin.com/in/ali-nadeem-74bb523b6/" target="_blank" rel="noopener noreferrer" className="w-full block">
+              View on LinkedIn
+            </a>
+          </ParticleCard>
         </div>
       </div>
 
-      <div className="relative group animate-scale-in">
-        <div className="absolute -inset-1 bg-primary/20 rounded-lg blur-xl group-hover:bg-primary/40 transition-all duration-500"></div>
-        <img
-          src="https://picsum.photos/300/300?random=1"
-          alt="Profile"
-          className="relative w-[300px] h-[300px] object-cover rounded-lg shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-500"
-          loading="eager"
-          decoding="async"
-          width="300"
-          height="300"
-        />
-      </div>
+      <ProfileCard
+        avatarUrl="https://cdn.builder.io/api/v1/image/assets%2F42ab9f74dfb742f7b5e9210ff08e2902%2Fac13db3955644600bcda5ce5f5e41db6?format=webp&width=800&height=1200"
+        miniAvatarUrl="https://cdn.builder.io/api/v1/image/assets%2F42ab9f74dfb742f7b5e9210ff08e2902%2Fac13db3955644600bcda5ce5f5e41db6?format=webp&width=800&height=1200"
+        name="Ali Nadeem"
+        title="Full Stack Developer"
+        handle="ali-nadeem"
+        status="Available"
+        contactText="Get in Touch"
+        contactUrl="#contact"
+        showUserInfo={true}
+        enableTilt={true}
+        behindGlowEnabled={true}
+        behindGlowColor="rgba(154, 57, 242, 0.5)"
+        innerGradient="linear-gradient(145deg, rgba(96, 73, 110, 0.55) 0%, rgba(113, 196, 255, 0.27) 100%)"
+      />
     </section>
   );
 };

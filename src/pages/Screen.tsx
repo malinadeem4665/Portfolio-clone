@@ -6,6 +6,7 @@ import EducationAssister from "@/components/EducationAssister";
 import Contact from "@/components/Contact";
 import CodingAnimation from "@/components/CodingAnimation";
 import FeaturedWork from "@/components/FeaturedWork";
+import { ParticleCard } from "@/components/MagicBento";
 
 const Screen = () => {
   return (
@@ -61,10 +62,16 @@ const Screen = () => {
               "Establish presentation consistency across Chrome, Safari, Firefox and other common browser interfaces",
               "Convert graphic designs to usable web images using Adobe Photo Shop"].
               map((text, i) =>
-              <div key={i} className="bg-card p-6 rounded-xl shadow-lg hover:shadow-primary/15 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex items-start gap-4 border border-border hover:border-primary/40 group">
+              <ParticleCard
+                key={i}
+                className="bg-card p-6 rounded-xl shadow-lg hover:shadow-primary/15 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex items-start gap-4 border border-border hover:border-primary/40 group"
+                enableMagnetism
+                clickEffect
+                enableStars
+              >
                     <span className="text-primary font-bold text-xl group-hover:scale-125 transition-transform">✔</span>
                     <p className="text-muted-foreground text-sm md:text-base group-hover:text-foreground transition-colors">{text}</p>
-                  </div>
+              </ParticleCard>
               )}
              </div>
           </div>
