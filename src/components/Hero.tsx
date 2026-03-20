@@ -1,6 +1,7 @@
 import { heroData } from '@/data/mockData';
 import AnimatedRole from './AnimatedRole';
 import { ParticleCard } from './MagicBento';
+import ProfileCard from './ProfileCard';
 
 const Hero = () => {
   const { intro } = heroData;
@@ -43,22 +44,21 @@ const Hero = () => {
         </div>
       </div>
 
-      <ParticleCard
-        className="relative group animate-scale-in"
-        enableMagnetism
-        clickEffect
-      >
-        <div className="absolute -inset-1 bg-primary/20 rounded-lg blur-xl group-hover:bg-primary/40 transition-all duration-500"></div>
-        <img
-          src="https://picsum.photos/300/300?random=1"
-          alt="Profile"
-          className="relative w-[300px] h-[300px] object-cover rounded-lg shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-500"
-          loading="eager"
-          decoding="async"
-          width="300"
-          height="300"
-        />
-      </ParticleCard>
+      <ProfileCard
+        avatarUrl="https://cdn.builder.io/api/v1/image/assets%2F42ab9f74dfb742f7b5e9210ff08e2902%2Fac13db3955644600bcda5ce5f5e41db6?format=webp&width=800&height=1200"
+        miniAvatarUrl="https://cdn.builder.io/api/v1/image/assets%2F42ab9f74dfb742f7b5e9210ff08e2902%2Fac13db3955644600bcda5ce5f5e41db6?format=webp&width=800&height=1200"
+        name="Ali Nadeem"
+        title="Full Stack Developer"
+        handle="ali-nadeem"
+        status="Available"
+        contactText="Get in Touch"
+        contactUrl="#contact"
+        showUserInfo={true}
+        enableTilt={true}
+        behindGlowEnabled={true}
+        behindGlowColor="rgba(154, 57, 242, 0.5)"
+        innerGradient="linear-gradient(145deg, rgba(96, 73, 110, 0.55) 0%, rgba(113, 196, 255, 0.27) 100%)"
+      />
     </section>
   );
 };
